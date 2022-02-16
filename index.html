@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tropical Bird</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet"> 
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background: #fdf7d4;
+		}
+		.container{
+			width: 600px;
+			height: 600px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		h2{
+			font-family: 'Barlow', sans-serif;
+			color: #eebf74;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 90px;
+			font-weight: 100;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 50px;
+		}
+		.branch{
+			width: 400px;
+			height: 20px;
+			background: #f38981;
+			border-radius: 10px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: 155px;
+		}
+		.leaf{
+			background: #83bd51;
+			width: 60px;
+			height: 25px;
+			border-radius: 30px 30px 0 0;
+			position: absolute;
+			left: -50px;
+			bottom: 20px;
+			transform-origin: right bottom;
+			transform: rotate(45deg);
+		}
+		.leaf:after{
+			content: '';
+			background: #90c962;
+			width: 34px;
+			height: 15px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			border-radius: 30px 30px 0 0;
+		}
+		.bird{
+			width: 245px;
+			height: 100px;
+			background: #524c62;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: 220px;
+			border-radius: 0 60px 0 80px;
+		}
+		.head{
+			width: 100px;
+			height: 160px;
+			background: #524c62;
+			position: absolute;
+			top: -160px;
+			border-radius: 80px 80px 0 0;
+		}
+		.eye{
+			width: 66px;
+			height: 66px;
+			background: #fdecd4;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 20px;
+			margin: auto;
+		}
+		.eye:before{
+			content: '';
+			width: 40px;
+			height: 40px;
+			background: #92c1ff;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 50%;
+		}
+		.eye:after{
+			content: '';
+			width: 20px;
+			height: 20px;
+			background: #524c62;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 50%;
+		}
+		.beak{
+			width: 250px;
+			height: 80px;
+			background: #fbbc5b;
+			position: absolute;
+			top: -160px;
+			border-radius: 50px 60px 0 0;
+			overflow: hidden;
+		}
+		.beak:before{
+			content: '';
+			width: 140px;
+			height: 140px;
+			background: #f4645a;
+			position: absolute;
+			border-radius: 50%;
+			left: 150px;
+			top: -30px;
+		}
+		.beak:after{
+			content: '';
+			width: 200px;
+			height: 80px;
+			border: 3px solid #524c62;
+			position: absolute;
+			bottom: -60px;
+			right: -28px;
+			border-radius: 0 100px 0 0;			
+		}
+		.wing{
+			width: 220px;
+			height: 95px;
+			background: #83bd51;
+			position: absolute;
+			top: -30px;
+			left: 70px;
+			border-radius: 0 0 100px 100px;
+			transform-origin: top left;
+			animation: flutter 5s infinite;
+		}
+		.wing:after{
+			content:  '';
+			width: 125px;
+			height: 60px;
+			background: #90c962;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 0 0 100px 100px;			
+		}
+		@keyframes flutter{
+			20%{
+				transform: rotate(-6deg);
+			}
+			30%{
+				transform: rotate(-2deg);
+			}
+			40%{
+				transform: rotate(-4deg);
+			}
+			50%{
+				transform: rotate(0);
+			}
+		}
+		.legs{
+			width: 15px;
+			height: 45px;
+			background: #fbbc5b;
+			position: absolute;
+			left: 140px;
+			bottom: -45px;
+			box-shadow: 40px 0 #fbbc5b;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="bird">
+			<div class="beak"></div>
+			<div class="head">
+				<div class="eye"></div>
+			</div>
+			<div class="wing"></div>
+			<div class="legs"></div>
+		</div>
+		<div class="branch">
+			<div class="leaf"></div>
+		</div>
+		<h2>toucan</h2>
+	</div>
+</body>
+</html>
